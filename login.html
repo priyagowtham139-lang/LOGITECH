@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sign In | Stackly Logistics</title>
+
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/extra.css?v=5">
+    <link rel="stylesheet" href="css/auth.css?v=5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Page loader (animated SVG truck) -->
+    <div id="ld">
+      <div class="lw">
+        <svg viewBox="0 0 200 90">
+          <path class="lp" d="M20 60h110V25H20zM130 38h30l20 20v12h-50M20 70h160" fill="none" stroke="#ef4444" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="55" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="150" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <div class="lb">
+          <i></i>
+        </div>
+        <p style="color:#5a6480;margin-top:10px;font-size:.85rem">Routing your shipment...</p>
+      </div>
+    </div>
+
+    <!-- Dark overlay behind the mobile menu -->
+    <div class="ov"></div>
+
+    <!-- Sticky header (mobile only): logo + hamburger menu -->
+    <header class="hd hd-auth">
+      <div class="w hdi">
+        <a class="logo" href="index.html">
+          <img src="assets/stackly-logo-16203C.webp" alt="Stackly" width="150" height="38">
+        </a>
+        <nav id="nv" aria-label="Main">
+          <button class="cl" aria-label="Close menu"><span></span><span></span></button>
+          <img class="nv-logo" src="assets/stackly-logo-16203C.webp" alt="Stackly" width="140" height="34">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn mo" href="signup.html">Sign Up</a>
+        </nav>
+        <div class="ac">
+          <a class="btn si" href="signup.html">Sign Up</a>
+        </div>
+        <button class="bg" id="bg" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <!-- Sign in area -->
+    <main class="au">
+      <div class="abg" aria-hidden="true">
+        <div class="afloor"></div>
+        <span class="aorb a1"></span>
+        <span class="aorb a2"></span>
+        <span class="aorb a3"></span>
+        <div class="acube u1"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="acube u2"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="acube u3"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="w authwrap">
+        <aside class="ap" data-a="l">
+          <img class="aplogo" src="assets/stackly-logo-16203C.webp" alt="Stackly" width="150" height="38">
+          <h1>Logistics that moves as <span class="gt">fast as you do.</span></h1>
+          <p class="apsub">Sign in to track shipments, manage carriers and settle invoices from one intelligent platform.</p>
+          <ul class="apl">
+            <li>Real-time tracking across 140+ countries</li>
+            <li>AI route and carrier matching</li>
+            <li>Automated customs and invoicing</li>
+          </ul>
+          <div class="aps">
+            <div><b>12M+</b><span>Shipments</span></div>
+            <div><b>98%</b><span>On-time</span></div>
+            <div><b>24/7</b><span>Support</span></div>
+          </div>
+        </aside>
+
+        <div class="ab" data-a="z">
+          <h2 class="atitle">Welcome back</h2>
+          <p class="asub">Sign in to your Stackly account to continue.</p>
+          <div class="tb roletab" data-role>
+            <button class="on" data-r="user">User</button>
+            <button data-r="admin">Admin</button>
+          </div>
+          <form class="fm" id="lf" novalidate>
+            <input type="email" id="lemail" placeholder="Email" required aria-label="Email">
+            <small class="err" id="lemailErr" hidden>Only Gmail addresses are allowed</small>
+            <div class="pw">
+              <input type="password" id="p1" placeholder="Password" required autocomplete="current-password" aria-label="Password">
+              <button type="button" class="eye" aria-label="Toggle password">Show</button>
+            </div>
+            <div class="arow">
+              <label class="chk"><input type="checkbox" checked> <span>Remember me</span></label>
+              <a class="lk" href="404.html">Forgot password?</a>
+            </div>
+            <button class="btn" type="submit">Sign In</button>
+          </form>
+          <div class="sep"><span>or continue with</span></div>
+          <div class="soc">
+            <button type="button" class="sbtn" aria-label="Continue with Google">
+              <svg viewBox="0 0 488 512" width="18" height="18" aria-hidden="true"><path fill="#EA4335" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+              Google
+            </button>
+            <button type="button" class="sbtn" aria-label="Continue with Microsoft">
+              <svg viewBox="0 0 448 512" width="18" height="18" aria-hidden="true"><path fill="#00A4EF" d="M0 32h214.6v214.6H0zm233.4 0H448v214.6H233.4zM0 265.4h214.6V480H0zm233.4 0H448V480H233.4z"/></svg>
+              Microsoft
+            </button>
+            <button type="button" class="sbtn" aria-label="Continue with Apple">
+              <svg viewBox="0 0 384 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              Apple
+            </button>
+          </div>
+          <p class="swap">New to Stackly? <a href="signup.html">Create an account</a></p>
+          <a class="btn o homeback" href="index.html">Go Back Home</a>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/main.js?v=5"></script>
+    <script src="js/extra.js?v=5"></script>
+  </body>
+</html>

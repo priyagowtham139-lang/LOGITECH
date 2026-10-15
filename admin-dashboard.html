@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin Dashboard | Stackly Logistics</title>
+
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/extra.css?v=5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <body>
+
+    <!-- Page loader (animated SVG truck) -->
+    <div id="ld">
+      <div class="lw">
+        <svg viewBox="0 0 200 90">
+          <path class="lp" d="M20 60h110V25H20zM130 38h30l20 20v12h-50M20 70h160" fill="none" stroke="#ef4444" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="55" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="150" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <div class="lb">
+          <i></i>
+        </div>
+        <p style="color:#5a6480;margin-top:10px;font-size:.85rem">Routing your shipment...</p>
+      </div>
+    </div>
+
+    <!-- Dark overlay behind the mobile menu -->
+    <div class="ov"></div>
+
+    <!-- Dashboard layout: sidebar + main area -->
+    <div class="db">
+
+      <!-- Dashboard sidebar (slide-in menu on mobile) -->
+      <aside class="sd">
+        <button class="cl" aria-label="Close menu"><span></span><span></span></button>
+        <img src="assets/stackly-logo-16203C.webp" alt="Stackly" width="150" height="36">
+        <div class="prof">
+          <span class="pfAv" id="pfAv">A</span>
+          <div class="pfTx">
+            <b id="pfName">Stackly Admin</b>
+            <span id="pfMail">admin@stackly.com</span>
+          </div>
+        </div>
+        <a href="#overview" data-view="overview" class="on"><i class="fa-solid fa-gauge"></i>Overview</a>
+        <a href="#users" data-view="users"><i class="fa-solid fa-users"></i>Users</a>
+        <a href="#fleet" data-view="fleet"><i class="fa-solid fa-truck"></i>Fleet</a>
+        <a href="#warehouses" data-view="warehouses"><i class="fa-solid fa-warehouse"></i>Warehouses</a>
+        <a href="#reports" data-view="reports"><i class="fa-solid fa-chart-pie"></i>Reports</a>
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+      </aside>
+
+      <!-- Dashboard main content -->
+      <div class="mn">
+        <div class="tp">
+          <img class="tpl" src="assets/stackly-logo-16203C.webp" alt="Stackly" width="130" height="30">
+          <h2 id="pageTitle">Overview</h2>
+          <button class="ib dbg" id="dbg" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+        <h2 class="mtitle" id="mTitle">Overview</h2>
+
+        <!-- ===================== OVERVIEW ===================== -->
+        <div class="view on" data-view="overview" data-title="Overview">
+          <div class="vs">
+            <div class="vh"><h3>Platform snapshot</h3><p>Last 30 days</p></div>
+            <div class="dg">
+              <div class="cd" data-a="l">
+                <b class="gt">4,120</b>
+                <span>Total users</span>
+              </div>
+              <div class="cd" data-a="u">
+                <b class="gt">386</b>
+                <span>Fleet vehicles</span>
+              </div>
+              <div class="cd" data-a="r">
+                <b class="gt">$92K</b>
+                <span>Revenue</span>
+              </div>
+              <div class="cd" data-a="d">
+                <b class="gt">7</b>
+                <span>Open alerts</span>
+              </div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Weekly activity</h3><a class="lnk" href="#reports">View reports</a></div>
+            <div class="g2">
+              <div class="cd pn" data-a="u">
+                <h4>Shipments processed</h4>
+                <svg class="bar" viewBox="0 0 400 160">
+                  <defs>
+                    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#ef4444"/>
+                      <stop offset="1" stop-color="#f97316"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="20" y="90" width="32" height="60" rx="8" fill="url(#g1)" style="animation-delay:0.0s"/>
+                  <rect x="72" y="55" width="32" height="95" rx="8" fill="url(#g1)" style="animation-delay:0.1s"/>
+                  <rect x="124" y="75" width="32" height="75" rx="8" fill="url(#g1)" style="animation-delay:0.2s"/>
+                  <rect x="176" y="30" width="32" height="120" rx="8" fill="url(#g1)" style="animation-delay:0.3s"/>
+                  <rect x="228" y="50" width="32" height="100" rx="8" fill="url(#g1)" style="animation-delay:0.4s"/>
+                  <rect x="280" y="15" width="32" height="135" rx="8" fill="url(#g1)" style="animation-delay:0.5s"/>
+                  <rect x="332" y="40" width="32" height="110" rx="8" fill="url(#g1)" style="animation-delay:0.6s"/>
+                </svg>
+              </div>
+              <div class="cd pn" data-a="u">
+                <h4>Platform SLA</h4>
+                <div class="mrow">
+                  <div class="lb2"><b>On-time delivery</b><span>94%</span></div>
+                  <div class="prog"><i style="width:94%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Fleet availability</b><span>88%</span></div>
+                  <div class="prog"><i style="width:88%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Platform uptime</b><span>99.9%</span></div>
+                  <div class="prog"><i style="width:99.9%"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Recent users</h3><a class="lnk" href="#users">Manage users</a></div>
+            <div class="cd pn" data-a="u">
+              <div class="tw">
+                <table>
+                  <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Region</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td>Ravi K.</td>
+                    <td>Fleet manager</td>
+                    <td>South India</td>
+                    <td><span class="pl gr">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Sara M.</td>
+                    <td>Dispatcher</td>
+                    <td>West India</td>
+                    <td><span class="pl gr">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>John D.</td>
+                    <td>Analyst</td>
+                    <td>MENA</td>
+                    <td><span class="pl gy">Invited</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== USERS ===================== -->
+        <div class="view" data-view="users" data-title="Users">
+          <div class="vs">
+            <div class="vh"><h3>User base</h3><p>Live counts</p></div>
+            <div class="dg sm">
+              <div class="cd" data-a="l"><b class="gt">4,120</b><span>Total users</span></div>
+              <div class="cd" data-a="u"><b class="gt">3,846</b><span>Active</span></div>
+              <div class="cd" data-a="r"><b class="gt">128</b><span>New this week</span></div>
+              <div class="cd" data-a="d"><b class="gt">22</b><span>Suspended</span></div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>User directory</h3><a class="lnk" href="#">Export CSV</a></div>
+            <div class="cd pn" data-a="u">
+              <div class="tw">
+                <table>
+                  <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Region</th>
+                    <th>Joined</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td>Ravi K.</td>
+                    <td>Fleet manager</td>
+                    <td>South India</td>
+                    <td>Mar 2024</td>
+                    <td><span class="pl gr">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Sara M.</td>
+                    <td>Dispatcher</td>
+                    <td>West India</td>
+                    <td>Jan 2025</td>
+                    <td><span class="pl gr">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>John D.</td>
+                    <td>Analyst</td>
+                    <td>MENA</td>
+                    <td>Sep 2026</td>
+                    <td><span class="pl gy">Invited</span></td>
+                  </tr>
+                  <tr>
+                    <td>Aisha N.</td>
+                    <td>Operations lead</td>
+                    <td>South India</td>
+                    <td>Jun 2023</td>
+                    <td><span class="pl gr">Active</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="g2e">
+              <div class="cd pn" data-a="u">
+                <h4>Signups this week</h4>
+                <div class="mrow">
+                  <div class="lb2"><b>Mon - Wed</b><span>62</span></div>
+                  <div class="prog"><i style="width:62%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Thu - Fri</b><span>41</span></div>
+                  <div class="prog"><i style="width:41%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Weekend</b><span>25</span></div>
+                  <div class="prog"><i style="width:25%"></i></div>
+                </div>
+              </div>
+              <div class="cd pn" data-a="u">
+                <h4>Recent activity</h4>
+                <ul class="tl2">
+                  <li><b>Aisha N. updated fleet policy</b><span>Today, 2:40 PM</span></li>
+                  <li><b>New user John D. invited</b><span>Today, 11:20 AM</span></li>
+                  <li><b>Sara M. created 12 orders</b><span>Yesterday, 6:05 PM</span></li>
+                  <li><b>Ravi K. closed 3 alerts</b><span>Yesterday, 9:15 AM</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== FLEET ===================== -->
+        <div class="view" data-view="fleet" data-title="Fleet">
+          <div class="vs">
+            <div class="vh"><h3>Fleet status</h3><p>Updated 5 min ago</p></div>
+            <div class="dg sm">
+              <div class="cd" data-a="l"><b class="gt">386</b><span>Vehicles</span></div>
+              <div class="cd" data-a="u"><b class="gt">341</b><span>Active now</span></div>
+              <div class="cd" data-a="r"><b class="gt">18</b><span>Maintenance</span></div>
+              <div class="cd" data-a="d"><b class="gt">88%</b><span>Utilisation</span></div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Vehicle registry</h3><a class="lnk" href="#">Add vehicle</a></div>
+            <div class="cd pn" data-a="u">
+              <div class="tw">
+                <table>
+                  <tr>
+                    <th>Vehicle</th>
+                    <th>Type</th>
+                    <th>Driver</th>
+                    <th>Region</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td>TN-09-AL-4471</td>
+                    <td>Trailer</td>
+                    <td>Murugan S.</td>
+                    <td>South India</td>
+                    <td><span class="pl gr">On route</span></td>
+                  </tr>
+                  <tr>
+                    <td>MH-12-QT-1180</td>
+                    <td>Container</td>
+                    <td>Salim K.</td>
+                    <td>West India</td>
+                    <td><span class="pl gr">On route</span></td>
+                  </tr>
+                  <tr>
+                    <td>KA-05-MX-2093</td>
+                    <td>Reefer</td>
+                    <td>Deepa R.</td>
+                    <td>South India</td>
+                    <td><span class="pl or">Maintenance</span></td>
+                  </tr>
+                  <tr>
+                    <td>DL-01-CT-7742</td>
+                    <td>Box truck</td>
+                    <td>Imran A.</td>
+                    <td>North India</td>
+                    <td><span class="pl gy">Idle</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="g2e">
+              <div class="cd pn" data-a="u">
+                <h4>Utilisation by region</h4>
+                <div class="mrow">
+                  <div class="lb2"><b>South India</b><span>92%</span></div>
+                  <div class="prog"><i style="width:92%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>West India</b><span>85%</span></div>
+                  <div class="prog"><i style="width:85%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>North India</b><span>74%</span></div>
+                  <div class="prog"><i style="width:74%"></i></div>
+                </div>
+              </div>
+              <div class="cd pn" data-a="u">
+                <h4>Maintenance schedule</h4>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-wrench"></i></span>
+                  <div class="tx"><b>KA-05-MX-2093</b><span>Reefer unit service</span></div>
+                  <span class="mt">Today</span>
+                </div>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-wrench"></i></span>
+                  <div class="tx"><b>TN-09-AL-4471</b><span>Tyre rotation</span></div>
+                  <span class="mt">16 Oct</span>
+                </div>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-wrench"></i></span>
+                  <div class="tx"><b>DL-01-CT-7742</b><span>Brake inspection</span></div>
+                  <span class="mt">19 Oct</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== WAREHOUSES ===================== -->
+        <div class="view" data-view="warehouses" data-title="Warehouses">
+          <div class="vs">
+            <div class="vh"><h3>Network overview</h3><p>Across 14 facilities</p></div>
+            <div class="dg sm">
+              <div class="cd" data-a="l"><b class="gt">14</b><span>Warehouses</span></div>
+              <div class="cd" data-a="u"><b class="gt">76%</b><span>Capacity used</span></div>
+              <div class="cd" data-a="r"><b class="gt">1,240</b><span>Inbound today</span></div>
+              <div class="cd" data-a="d"><b class="gt">1,180</b><span>Outbound today</span></div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Facility cards</h3><a class="lnk" href="#">Add facility</a></div>
+            <div class="qk">
+              <a href="#reports">
+                <i class="fa-solid fa-warehouse"></i>
+                <b>Chennai Central</b>
+                <span>82% capacity · Zone A</span>
+              </a>
+              <a href="#reports">
+                <i class="fa-solid fa-warehouse"></i>
+                <b>Mumbai West</b>
+                <span>71% capacity · Zone B</span>
+              </a>
+              <a href="#reports">
+                <i class="fa-solid fa-warehouse"></i>
+                <b>Delhi North</b>
+                <span>64% capacity · Zone C</span>
+              </a>
+              <a href="#reports">
+                <i class="fa-solid fa-warehouse"></i>
+                <b>Bangalore South</b>
+                <span>88% capacity · Zone A</span>
+              </a>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="g2e">
+              <div class="cd pn" data-a="u">
+                <h4>Capacity by hub</h4>
+                <div class="mrow">
+                  <div class="lb2"><b>Chennai Central</b><span>82%</span></div>
+                  <div class="prog"><i style="width:82%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Bangalore South</b><span>88%</span></div>
+                  <div class="prog"><i style="width:88%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Mumbai West</b><span>71%</span></div>
+                  <div class="prog"><i style="width:71%"></i></div>
+                </div>
+              </div>
+              <div class="cd pn" data-a="u">
+                <h4>Stock alerts</h4>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                  <div class="tx"><b>Low stock - SKU 2041</b><span>Chennai Central</span></div>
+                  <span class="mt">High</span>
+                </div>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-clock"></i></span>
+                  <div class="tx"><b>Slow moving - SKU 1180</b><span>Delhi North</span></div>
+                  <span class="mt">Medium</span>
+                </div>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-box"></i></span>
+                  <div class="tx"><b>Overstock - SKU 3307</b><span>Mumbai West</span></div>
+                  <span class="mt">Low</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== REPORTS ===================== -->
+        <div class="view" data-view="reports" data-title="Reports">
+          <div class="vs">
+            <div class="vh"><h3>Reporting overview</h3><p>Auto-generated</p></div>
+            <div class="dg sm">
+              <div class="cd" data-a="l"><b class="gt">62</b><span>Reports</span></div>
+              <div class="cd" data-a="u"><b class="gt">12</b><span>Scheduled</span></div>
+              <div class="cd" data-a="r"><b class="gt">4.8M</b><span>Data points</span></div>
+              <div class="cd" data-a="d"><b class="gt">99.9%</b><span>Uptime</span></div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="g2">
+              <div class="cd pn" data-a="u">
+                <h4>Volume trend</h4>
+                <svg class="bar" viewBox="0 0 400 160">
+                  <defs>
+                    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#ef4444"/>
+                      <stop offset="1" stop-color="#f97316"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="20" y="80" width="32" height="70" rx="8" fill="url(#g2)" style="animation-delay:0.0s"/>
+                  <rect x="72" y="60" width="32" height="90" rx="8" fill="url(#g2)" style="animation-delay:0.1s"/>
+                  <rect x="124" y="95" width="32" height="55" rx="8" fill="url(#g2)" style="animation-delay:0.2s"/>
+                  <rect x="176" y="40" width="32" height="110" rx="8" fill="url(#g2)" style="animation-delay:0.3s"/>
+                  <rect x="228" y="70" width="32" height="80" rx="8" fill="url(#g2)" style="animation-delay:0.4s"/>
+                  <rect x="280" y="25" width="32" height="125" rx="8" fill="url(#g2)" style="animation-delay:0.5s"/>
+                  <rect x="332" y="50" width="32" height="100" rx="8" fill="url(#g2)" style="animation-delay:0.6s"/>
+                </svg>
+              </div>
+              <div class="cd pn" data-a="u">
+                <h4>Top routes</h4>
+                <div class="mrow">
+                  <div class="lb2"><b>Chennai - Dubai</b><span>1,204</span></div>
+                  <div class="prog"><i style="width:90%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Mumbai - Delhi</b><span>988</span></div>
+                  <div class="prog"><i style="width:74%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Kochi - Bangalore</b><span>612</span></div>
+                  <div class="prog"><i style="width:46%"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Generated reports</h3><a class="lnk" href="#">New report</a></div>
+            <div class="cd pn" data-a="u">
+              <div class="tw">
+                <table>
+                  <tr>
+                    <th>Report</th>
+                    <th>Period</th>
+                    <th>Generated</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td>Monthly operations</td>
+                    <td>Sep 2026</td>
+                    <td>01 Oct 2026</td>
+                    <td><span class="pl gr">Ready</span></td>
+                  </tr>
+                  <tr>
+                    <td>Fleet utilisation</td>
+                    <td>Q3 2026</td>
+                    <td>30 Sep 2026</td>
+                    <td><span class="pl gr">Ready</span></td>
+                  </tr>
+                  <tr>
+                    <td>Warehouse throughput</td>
+                    <td>Oct 2026</td>
+                    <td>Today</td>
+                    <td><span class="pl or">Running</span></td>
+                  </tr>
+                  <tr>
+                    <td>Customer SLA</td>
+                    <td>Oct 2026</td>
+                    <td>Scheduled</td>
+                    <td><span class="pl gy">Queued</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js?v=5"></script>
+    <script src="js/extra.js?v=5"></script>
+  </body>
+</html>

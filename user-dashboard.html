@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>User Dashboard | Stackly Logistics</title>
+
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/extra.css?v=5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  </head>
+  <body>
+
+    <!-- Page loader (animated SVG truck) -->
+    <div id="ld">
+      <div class="lw">
+        <svg viewBox="0 0 200 90">
+          <path class="lp" d="M20 60h110V25H20zM130 38h30l20 20v12h-50M20 70h160" fill="none" stroke="#ef4444" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="55" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="150" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <div class="lb">
+          <i></i>
+        </div>
+        <p style="color:#5a6480;margin-top:10px;font-size:.85rem">Routing your shipment...</p>
+      </div>
+    </div>
+
+    <!-- Dark overlay behind the mobile menu -->
+    <div class="ov"></div>
+
+    <!-- Dashboard layout: sidebar + main area -->
+    <div class="db">
+
+      <!-- Dashboard sidebar (slide-in menu on mobile) -->
+      <aside class="sd">
+        <button class="cl" aria-label="Close menu"><span></span><span></span></button>
+        <img src="assets/stackly-logo-16203C.webp" alt="Stackly" width="150" height="36">
+        <div class="prof">
+          <span class="pfAv" id="pfAv">S</span>
+          <div class="pfTx">
+            <b id="pfName">Stackly User</b>
+            <span id="pfMail">guest@stackly.com</span>
+          </div>
+        </div>
+        <a href="#overview" data-view="overview" class="on"><i class="fa-solid fa-gauge"></i>Overview</a>
+        <a href="#shipments" data-view="shipments"><i class="fa-solid fa-box"></i>My Shipments</a>
+        <a href="#tracking" data-view="tracking"><i class="fa-solid fa-location-dot"></i>Tracking</a>
+        <a href="#invoices" data-view="invoices"><i class="fa-solid fa-file-invoice"></i>Invoices</a>
+        <a href="#wishlist" data-view="wishlist"><i class="fa-solid fa-heart"></i>Wishlist</a>
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+      </aside>
+
+      <!-- Dashboard main content -->
+      <div class="mn">
+        <div class="tp">
+          <img class="tpl" src="assets/stackly-logo-16203C.webp" alt="Stackly" width="130" height="30">
+          <h2 id="pageTitle">Overview</h2>
+          <button class="ib dbg" id="dbg" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+        <h2 class="mtitle" id="mTitle">Overview</h2>
+
+        <!-- ===================== OVERVIEW ===================== -->
+        <div class="view on" data-view="overview" data-title="Overview">
+          <div class="vs">
+            <div class="vh"><h3>Performance snapshot</h3><p>Last 30 days</p></div>
+            <div class="dg">
+              <div class="cd" data-a="l">
+                <b class="gt">24</b>
+                <span>Active shipments</span>
+              </div>
+              <div class="cd" data-a="u">
+                <b class="gt">312</b>
+                <span>Delivered</span>
+              </div>
+              <div class="cd" data-a="r">
+                <b class="gt">$4.2K</b>
+                <span>Spend</span>
+              </div>
+              <div class="cd" data-a="d">
+                <b class="gt">2d</b>
+                <span>Avg transit</span>
+              </div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Weekly activity</h3><a class="lnk" href="#tracking">View live tracking</a></div>
+            <div class="g2">
+              <div class="cd pn" data-a="u">
+                <h4>Shipments moved</h4>
+                <svg class="bar" viewBox="0 0 400 160">
+                  <defs>
+                    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#ef4444"/>
+                      <stop offset="1" stop-color="#f97316"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="20" y="90" width="32" height="60" rx="8" fill="url(#g1)" style="animation-delay:0.0s"/>
+                  <rect x="72" y="55" width="32" height="95" rx="8" fill="url(#g1)" style="animation-delay:0.1s"/>
+                  <rect x="124" y="75" width="32" height="75" rx="8" fill="url(#g1)" style="animation-delay:0.2s"/>
+                  <rect x="176" y="30" width="32" height="120" rx="8" fill="url(#g1)" style="animation-delay:0.3s"/>
+                  <rect x="228" y="50" width="32" height="100" rx="8" fill="url(#g1)" style="animation-delay:0.4s"/>
+                  <rect x="280" y="15" width="32" height="135" rx="8" fill="url(#g1)" style="animation-delay:0.5s"/>
+                  <rect x="332" y="40" width="32" height="110" rx="8" fill="url(#g1)" style="animation-delay:0.6s"/>
+                </svg>
+              </div>
+              <div class="cd pn" data-a="u">
+                <h4>Service level</h4>
+                <div class="mrow">
+                  <div class="lb2"><b>On-time delivery</b><span>96%</span></div>
+                  <div class="prog"><i style="width:96%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>In-full shipments</b><span>92%</span></div>
+                  <div class="prog"><i style="width:92%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Documentation accuracy</b><span>99%</span></div>
+                  <div class="prog"><i style="width:99%"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Recent shipments</h3><a class="lnk" href="#shipments">View all</a></div>
+            <div class="cd pn" data-a="u">
+              <div class="tw">
+                <table>
+                  <tr>
+                    <th>ID</th>
+                    <th>Route</th>
+                    <th>Carrier</th>
+                    <th>ETA</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td>#SK1021</td>
+                    <td>Chennai - Dubai</td>
+                    <td>Bluewave</td>
+                    <td>14 Oct</td>
+                    <td><span class="pl or">In transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>#SK1020</td>
+                    <td>Mumbai - Delhi</td>
+                    <td>Skyline</td>
+                    <td>Delivered</td>
+                    <td><span class="pl gr">Delivered</span></td>
+                  </tr>
+                  <tr>
+                    <td>#SK1019</td>
+                    <td>Pune - Goa</td>
+                    <td>Coastline</td>
+                    <td>16 Oct</td>
+                    <td><span class="pl gy">Pending</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== MY SHIPMENTS ===================== -->
+        <div class="view" data-view="shipments" data-title="My Shipments">
+          <div class="vs">
+            <div class="vh"><h3>Shipment pipeline</h3><p>Updated 5 min ago</p></div>
+            <div class="dg sm">
+              <div class="cd" data-a="l"><b class="gt">24</b><span>In transit</span></div>
+              <div class="cd" data-a="u"><b class="gt">312</b><span>Delivered</span></div>
+              <div class="cd" data-a="r"><b class="gt">9</b><span>Awaiting pickup</span></div>
+              <div class="cd" data-a="d"><b class="gt">3</b><span>Exceptions</span></div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Shipment manifest</h3><a class="lnk" href="#tracking">Track</a></div>
+            <div class="cd pn" data-a="u">
+              <div class="tw">
+                <table>
+                  <tr>
+                    <th>ID</th>
+                    <th>Route</th>
+                    <th>Carrier</th>
+                    <th>Weight</th>
+                    <th>ETA</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td>#SK1021</td>
+                    <td>Chennai - Dubai</td>
+                    <td>Bluewave</td>
+                    <td>1,240 kg</td>
+                    <td>14 Oct</td>
+                    <td><span class="pl or">In transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>#SK1020</td>
+                    <td>Mumbai - Delhi</td>
+                    <td>Skyline</td>
+                    <td>860 kg</td>
+                    <td>13 Oct</td>
+                    <td><span class="pl gr">Delivered</span></td>
+                  </tr>
+                  <tr>
+                    <td>#SK1019</td>
+                    <td>Pune - Goa</td>
+                    <td>Coastline</td>
+                    <td>540 kg</td>
+                    <td>16 Oct</td>
+                    <td><span class="pl gy">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>#SK1018</td>
+                    <td>Kochi - Bangalore</td>
+                    <td>Nortech</td>
+                    <td>2,010 kg</td>
+                    <td>17 Oct</td>
+                    <td><span class="pl or">In transit</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="g2e">
+              <div class="cd pn" data-a="u">
+                <h4>Capacity utilisation</h4>
+                <div class="mrow">
+                  <div class="lb2"><b>Road freight</b><span>78%</span></div>
+                  <div class="prog"><i style="width:78%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Ocean freight</b><span>64%</span></div>
+                  <div class="prog"><i style="width:64%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Air freight</b><span>41%</span></div>
+                  <div class="prog"><i style="width:41%"></i></div>
+                </div>
+              </div>
+              <div class="cd pn" data-a="u">
+                <h4>Upcoming pickups</h4>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-truck"></i></span>
+                  <div class="tx"><b>#SK1021 - Chennai hub</b><span>Bluewave Logistics</span></div>
+                  <span class="mt">Today, 4 PM</span>
+                </div>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-truck"></i></span>
+                  <div class="tx"><b>#SK1018 - Kochi port</b><span>Nortech Freight</span></div>
+                  <span class="mt">Tomorrow, 9 AM</span>
+                </div>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-truck"></i></span>
+                  <div class="tx"><b>#SK1019 - Pune depot</b><span>Coastline Cargo</span></div>
+                  <span class="mt">18 Oct, 11 AM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== TRACKING ===================== -->
+        <div class="view" data-view="tracking" data-title="Tracking">
+          <div class="vs">
+            <div class="vh"><h3>Live metrics</h3><p>Real time</p></div>
+            <div class="dg sm">
+              <div class="cd" data-a="l"><b class="gt">96%</b><span>On-time rate</span></div>
+              <div class="cd" data-a="u"><b class="gt">24</b><span>In transit</span></div>
+              <div class="cd" data-a="r"><b class="gt">2</b><span>Delayed</span></div>
+              <div class="cd" data-a="d"><b class="gt">2d</b><span>Avg ETA</span></div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="g2e">
+              <div class="cd pn" data-a="u">
+                <h4>Active consignments</h4>
+                <div class="mrow">
+                  <div class="lb2"><b>#SK1021 - Chennai to Dubai</b><span>72%</span></div>
+                  <div class="prog"><i style="width:72%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>#SK1018 - Kochi to Bangalore</b><span>45%</span></div>
+                  <div class="prog"><i style="width:45%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>#SK1019 - Pune to Goa</b><span>18%</span></div>
+                  <div class="prog"><i style="width:18%"></i></div>
+                </div>
+              </div>
+              <div class="cd pn" data-a="u">
+                <h4>Latest scans</h4>
+                <ul class="tl2">
+                  <li><b>Departed Chennai hub</b><span>Today, 3:20 PM</span></li>
+                  <li><b>Customs cleared</b><span>Today, 11:05 AM</span></li>
+                  <li><b>Arrived at origin port</b><span>Yesterday, 9:40 PM</span></li>
+                  <li><b>Picked up from shipper</b><span>Yesterday, 2:15 PM</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Tracking events</h3></div>
+            <div class="cd pn" data-a="u">
+              <div class="tw">
+                <table>
+                  <tr>
+                    <th>Reference</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td>#SK1021</td>
+                    <td>Departed hub</td>
+                    <td>Chennai</td>
+                    <td>3:20 PM</td>
+                    <td><span class="pl or">In transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>#SK1018</td>
+                    <td>In customs</td>
+                    <td>Kochi</td>
+                    <td>1:10 PM</td>
+                    <td><span class="pl gy">Hold</span></td>
+                  </tr>
+                  <tr>
+                    <td>#SK1019</td>
+                    <td>Scheduled</td>
+                    <td>Pune</td>
+                    <td>10:00 AM</td>
+                    <td><span class="pl gr">Confirmed</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== INVOICES ===================== -->
+        <div class="view" data-view="invoices" data-title="Invoices">
+          <div class="vs">
+            <div class="vh"><h3>Billing summary</h3><p>October 2026</p></div>
+            <div class="dg sm">
+              <div class="cd" data-a="l"><b class="gt">$1.8K</b><span>Outstanding</span></div>
+              <div class="cd" data-a="u"><b class="gt">$2.4K</b><span>Paid this month</span></div>
+              <div class="cd" data-a="r"><b class="gt">$220</b><span>Overdue</span></div>
+              <div class="cd" data-a="d"><b class="gt">$5K</b><span>Credit limit</span></div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Invoice history</h3><a class="lnk" href="#">Download all</a></div>
+            <div class="cd pn" data-a="u">
+              <div class="tw">
+                <table>
+                  <tr>
+                    <th>Invoice</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Due</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td>INV-2091</td>
+                    <td>01 Oct 2026</td>
+                    <td>$1,240</td>
+                    <td>15 Oct</td>
+                    <td><span class="pl gy">Unpaid</span></td>
+                  </tr>
+                  <tr>
+                    <td>INV-2088</td>
+                    <td>24 Sep 2026</td>
+                    <td>$860</td>
+                    <td>08 Oct</td>
+                    <td><span class="pl gr">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td>INV-2085</td>
+                    <td>18 Sep 2026</td>
+                    <td>$1,540</td>
+                    <td>02 Oct</td>
+                    <td><span class="pl gr">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td>INV-2080</td>
+                    <td>09 Sep 2026</td>
+                    <td>$220</td>
+                    <td>23 Sep</td>
+                    <td><span class="pl or">Overdue</span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="g2e">
+              <div class="cd pn" data-a="u">
+                <h4>Payment history</h4>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-check"></i></span>
+                  <div class="tx"><b>INV-2088 settled</b><span>Visa ending 4821</span></div>
+                  <span class="mt">08 Oct</span>
+                </div>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-check"></i></span>
+                  <div class="tx"><b>INV-2085 settled</b><span>Bank transfer</span></div>
+                  <span class="mt">02 Oct</span>
+                </div>
+                <div class="li">
+                  <span class="av2"><i class="fa-solid fa-check"></i></span>
+                  <div class="tx"><b>INV-2079 settled</b><span>Visa ending 4821</span></div>
+                  <span class="mt">21 Sep</span>
+                </div>
+              </div>
+              <div class="cd pn" data-a="u">
+                <h4>Spend by service</h4>
+                <div class="mrow">
+                  <div class="lb2"><b>Road freight</b><span>$1,980</span></div>
+                  <div class="prog"><i style="width:82%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Warehousing</b><span>$1,140</span></div>
+                  <div class="prog"><i style="width:48%"></i></div>
+                </div>
+                <div class="mrow">
+                  <div class="lb2"><b>Customs & compliance</b><span>$620</span></div>
+                  <div class="prog"><i style="width:26%"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================== WISHLIST ===================== -->
+        <div class="view" data-view="wishlist" data-title="Wishlist">
+          <div class="vs">
+            <div class="vh"><h3>Saved overview</h3><p>Quick access to favourites</p></div>
+            <div class="dg sm">
+              <div class="cd" data-a="l"><b class="gt">6</b><span>Saved routes</span></div>
+              <div class="cd" data-a="u"><b class="gt">4</b><span>Saved carriers</span></div>
+              <div class="cd" data-a="r"><b class="gt">3</b><span>Saved quotes</span></div>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Saved items</h3></div>
+            <div class="qk">
+              <a href="#shipments">
+                <i class="fa-solid fa-route"></i>
+                <b>Chennai - Dubai</b>
+                <span>Ocean freight · weekly</span>
+              </a>
+              <a href="#shipments">
+                <i class="fa-solid fa-route"></i>
+                <b>Mumbai - Delhi</b>
+                <span>Road freight · daily</span>
+              </a>
+              <a href="#shipments">
+                <i class="fa-solid fa-truck-fast"></i>
+                <b>Bluewave Logistics</b>
+                <span>Preferred carrier · 4.8</span>
+              </a>
+              <a href="#shipments">
+                <i class="fa-solid fa-truck-fast"></i>
+                <b>Skyline Freight</b>
+                <span>Preferred carrier · 4.6</span>
+              </a>
+              <a href="#invoices">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <b>Q4 bulk quote</b>
+                <span>Valid until 30 Nov</span>
+              </a>
+              <a href="#invoices">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <b>Cold chain quote</b>
+                <span>Valid until 15 Nov</span>
+              </a>
+            </div>
+          </div>
+          <div class="vs">
+            <div class="vh"><h3>Recommended for you</h3></div>
+            <div class="cd pn" data-a="u">
+              <div class="li">
+                <span class="av2"><i class="fa-solid fa-snowflake"></i></span>
+                <div class="tx"><b>Cold chain service</b><span>Temperature-controlled lanes for perishables</span></div>
+                <a class="lnk" href="#shipments">Add</a>
+              </div>
+              <div class="li">
+                <span class="av2"><i class="fa-solid fa-warehouse"></i></span>
+                <div class="tx"><b>Smart warehousing</b><span>On-demand storage near your busiest lanes</span></div>
+                <a class="lnk" href="#shipments">Add</a>
+              </div>
+              <div class="li">
+                <span class="av2"><i class="fa-solid fa-shield-halved"></i></span>
+                <div class="tx"><b>Cargo insurance</b><span>Cover high-value shipments end to end</span></div>
+                <a class="lnk" href="#invoices">Add</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js?v=5"></script>
+    <script src="js/extra.js?v=5"></script>
+  </body>
+</html>

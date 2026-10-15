@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact Us | Stackly Logistics</title>
+    
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/extra.css?v=5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Page loader (animated SVG truck) -->
+    <div id="ld">
+      <div class="lw">
+        <svg viewBox="0 0 200 90">
+          <path class="lp" d="M20 60h110V25H20zM130 38h30l20 20v12h-50M20 70h160" fill="none" stroke="#ef4444" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="55" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="150" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <div class="lb">
+          <i></i>
+        </div>
+        <p style="color:#5a6480;margin-top:10px;font-size:.85rem">Routing your shipment...</p>
+      </div>
+    </div>
+
+    <!-- Dark overlay behind the mobile menu -->
+    <div class="ov"></div>
+
+    <!-- Sticky header: logo, navigation, search, wishlist, cart, sign in, hamburger -->
+    <header class="hd">
+      <div class="w hdi">
+        <a class="logo" href="index.html">
+          <img src="assets/stackly-logo-16203C.webp" alt="Stackly" width="150" height="38">
+        </a>
+
+        <!-- Navigation (becomes the right-side slide menu on mobile) -->
+        <nav id="nv" aria-label="Main">
+          <button class="cl" aria-label="Close menu"><span></span><span></span></button>
+          <img class="nv-logo" src="assets/stackly-logo-16203C.webp" alt="Stackly" width="140" height="34">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html" class=on>Contact</a>
+          <a class="btn mo" href="login.html">Sign In</a>
+        </nav>
+        <div class="ac">
+          <a class="btn si" href="login.html">Sign In</a>
+        </div>
+        <button class="bg" id="bg" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <!-- Section 1: Stackly - Contact Us -->
+    <section class="page">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="w">
+        <span class="tag">Stackly</span>
+        <h1 data-a="d">Contact Us</h1>
+      </div>
+    </section>
+
+    <!-- Section 2: Reach us - Get in touch -->
+    <section class="lined">
+      <svg class="pg-svg" aria-hidden="true">
+        <defs>
+          <pattern id="ln-touch" width="44" height="44" patternUnits="userSpaceOnUse">
+            <path d="M44 0H0v44" fill="none" stroke="#ef4444" stroke-width="1" stroke-opacity=".5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#ln-touch)"/>
+      </svg>
+      <div class="w">
+        <span class="tag" data-a="l">Reach us</span>
+        <h2 data-a="l">Get in touch</h2>
+        <p class="sub" data-a="r"></p>
+        <div class="gr">
+          <div class="cd " data-a="l">
+            <h3>Visit</h3>
+            <p>MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+          </div>
+          <div class="cd r" data-a="u">
+            <h3>Call</h3>
+            <p>07010792745</p>
+          </div>
+          <div class="cd d" data-a="r">
+            <h3>Email</h3>
+            <p>https://thestackly.com/</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Message - Send us a message -->
+    <section class="orange">
+      <div class="w">
+        <span class="tag" data-a="l">Message</span>
+        <h2 data-a="l">Send us a message</h2>
+        <p class="sub" data-a="r"></p>
+        <div class="sp">
+          <div>
+            <form id="cform" class="fm" data-a="r">
+              <input id="cname" placeholder="Full name" aria-label="Name">
+              <small class="err" id="cnameErr" hidden>Only alphabets are allowed</small>
+              <input id="cemail" type="email" placeholder="Email" aria-label="Email">
+              <small class="err" id="cemailErr" hidden>Only Gmail addresses are allowed</small>
+              <select aria-label="Topic"><option>Sales</option><option>Support</option></select>
+              <textarea rows="4" placeholder="Message" aria-label="Message"></textarea>
+              <button class="btn">Send Message</button>
+            </form>
+          </div>
+          <iframe class="map" data-a="z" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1616098770783!2d78.17140487505539!3d11.682956588526356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1791951748900!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Stackly location map"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Offices - Global offices -->
+    <section class="">
+      <div class="w">
+        <span class="tag" data-a="l">Offices</span>
+        <h2 data-a="l">Global offices</h2>
+        <p class="sub" data-a="r"></p>
+        <div class="gr">
+          <div class="cd " data-a="r">
+            <img class="ci" src="assets/salem.webp" alt="Chennai" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/warehouse.svg'">
+            <h3>Salem</h3>
+            <p>HQ</p>
+          </div>
+          <div class="cd r" data-a="l">
+            <img class="ci" src="assets/chennai.webp" alt="Singapore" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/freight.svg'">
+            <h3>chennai</h3>
+            <p>APAC</p>
+          </div>
+          <div class="cd d" data-a="d">
+            <img class="ci" src="assets/hyderabad.webp" alt="Dubai" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/cold.svg'">
+            <h3>Hyderabad</h3>
+            <p>MEA</p>
+          </div>
+          <div class="cd " data-a="u">
+            <img class="ci" src="assets/bangalore.webp" alt="London" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/analytics.svg'">
+            <h3>Bangalore</h3>
+            <p>EMEA</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Hours - Support hours -->
+    <section class="wave">
+      <div class="w">
+        <span class="tag" data-a="l">Hours</span>
+        <h2 data-a="l">Support hours</h2>
+        <p class="sub" data-a="r"></p>
+        <div class="st">
+          <div data-a="z">
+            <b class="gt" data-n="24" data-s="/7">0</b>
+            <span>Support</span>
+          </div>
+          <div data-a="z">
+            <b class="gt" data-n="15" data-s="min">0</b>
+            <span>Response</span>
+          </div>
+          <div data-a="z">
+            <b class="gt" data-n="12" data-s="">0</b>
+            <span>Cities</span>
+          </div>
+          <div data-a="z">
+            <b class="gt" data-n="5" data-s="">0</b>
+            <span>Languages</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Partners - Partner with us -->
+    <section class="">
+      <div class="w">
+        <span class="tag" data-a="l">Partners</span>
+        <h2 data-a="l">Partner with us</h2>
+        <p class="sub" data-a="r"></p>
+        <div class="sp ">
+          <div data-a="l">
+            <h3 style="font-size:1.5rem">Grow together</h3>
+            <p style="color:#5a6480;margin-top:8px">Carriers, 3PLs and technology partners can join the Stackly marketplace to reach new customers, automate settlements and integrate through our open API.</p>
+            <ul>
+              <li>Partner portal</li>
+              <li>Revenue share</li>
+            </ul>
+          </div>
+          <img class="ci sp2" data-a="z" src="assets/Partnership_grow.webp" alt="Grow together" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/cold.svg'">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Headquarters - Visit our Chennai office -->
+    <section class="orange">
+      <div class="w">
+        <span class="tag" data-a="l">Headquarters</span>
+        <h2 data-a="l">Visit our Chennai office</h2>
+        <p class="sub" data-a="r">Meet the team, see a live demo on our operations wall or join an open workshop.</p>
+        <div class="sp rv">
+          <div data-a="r">
+            <h3 style="font-size:1.5rem">Stackly Headquarters</h3>
+            <p style="color:#5a6480;margin-top:8px">MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008. Our innovation centre features a live control tower showing shipments around the world, plus a meeting space for customer workshops.</p>
+            <ul>
+              <li>Monday to Friday, 9:00 to 18:00 IST</li>
+              <li>Visitor parking and metro access</li>
+              <li>Demo bookings available on request</li>
+            </ul>
+          </div>
+          <img class="ci sp2 bimg" data-a="z" src="assets/chennai_building.webp" alt="Stackly Headquarters" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/port.svg'">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: FAQ - Contact FAQs -->
+    <section class="">
+      <div class="w">
+        <span class="tag" data-a="l">FAQ</span>
+        <h2 data-a="l">Contact FAQs</h2>
+        <p class="sub" data-a="r"></p>
+        <details class="fq" data-a="u">
+          <summary>Response time?</summary>
+          <p>Sales and support enquiries are answered within 15 minutes during business hours, and within two hours outside them.</p>
+        </details>
+        <details class="fq" data-a="u">
+          <summary>Demo?</summary>
+          <p>Complete the form above and a solutions engineer will schedule a personalised 30-minute walkthrough using your own lanes and data.</p>
+        </details>
+        <details class="fq" data-a="u">
+          <summary>What should I include in my message?</summary>
+          <p>Share your main trade lanes, monthly shipment volume and any systems you use, and we can respond with a tailored proposal faster.</p>
+        </details>
+        <details class="fq" data-a="u">
+          <summary>Do you offer phone support?</summary>
+          <p>Yes. Priority plans include around-the-clock phone support, while all customers can reach us by live chat and email.</p>
+        </details>
+        <details class="fq" data-a="u">
+          <summary>Can I visit your office?</summary>
+          <p>Absolutely. Our Salem headquarters welcomes visitors Monday to Friday, and demo bookings are available on request.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Section 9: Prefer to talk to someone now? -->
+    <section>
+      <div class="w">
+        <div class="cta" data-a="z">
+          <h2>Prefer to talk to someone now?</h2>
+          <p>Our sales team is available around the clock.</p>
+          <a class="btn b5" href="404.html">Call 07010792745</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expandable footer: logo, social icons (go to 404), about, address -->
+    <footer class="ft">
+      <div class="w">
+        <div class="fh">
+          <img src="assets/stackly-logo-16203C.webp" alt="Stackly" width="150" height="38">
+          <div class="so">
+            <a href="404.html" aria-label="facebook-f"><svg viewBox="0 0 320 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></a>
+            <a href="404.html" aria-label="x-twitter"><svg viewBox="0 0 512 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+            <a href="404.html" aria-label="linkedin-in"><svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+            <a href="404.html" aria-label="instagram"><svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+            <a href="404.html" aria-label="youtube"><svg viewBox="0 0 576 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a>
+          </div>
+          <button class="btn o tg" aria-expanded="false">More about us</button>
+        </div>
+        <div class="fx">
+          <div class="fxg">
+            <div>
+              <h5>About Stackly</h5>
+              <p>Stackly is a logistics technology company connecting shippers, carriers and warehouses on one intelligent platform.</p>
+            </div>
+            <div>
+              <h5>Address</h5>
+              <p><strong>Address:</strong> MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+              <p><strong>Phone:</strong> 07010792745</p>
+              <p><strong>Website:</strong> https://thestackly.com/</p>
+            </div>
+            <div>
+              <h5>Explore</h5>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="fb">
+          &copy;
+          2026 Stackly Technologies. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js?v=5"></script>
+    <script src="js/extra.js?v=5"></script>
+  </body>
+</html>

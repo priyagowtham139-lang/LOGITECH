@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>About Us | Stackly Logistics</title>
+    
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/extra.css?v=5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Page loader (animated SVG truck) -->
+    <div id="ld">
+      <div class="lw">
+        <svg viewBox="0 0 200 90">
+          <path class="lp" d="M20 60h110V25H20zM130 38h30l20 20v12h-50M20 70h160" fill="none" stroke="#ef4444" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="55" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="150" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <div class="lb">
+          <i></i>
+        </div>
+        <p style="color:#5a6480;margin-top:10px;font-size:.85rem">Routing your shipment...</p>
+      </div>
+    </div>
+
+    <!-- Dark overlay behind the mobile menu -->
+    <div class="ov"></div>
+
+    <!-- Sticky header: logo, navigation, search, wishlist, cart, sign in, hamburger -->
+    <header class="hd">
+      <div class="w hdi">
+        <a class="logo" href="index.html">
+          <img src="assets/stackly-logo-16203C.webp" alt="Stackly" width="150" height="38">
+        </a>
+
+        <!-- Navigation (becomes the right-side slide menu on mobile) -->
+        <nav id="nv" aria-label="Main">
+          <button class="cl" aria-label="Close menu"><span></span><span></span></button>
+          <img class="nv-logo" src="assets/stackly-logo-16203C.webp" alt="Stackly" width="140" height="34">
+          <a href="index.html">Home</a>
+          <a href="about.html" class=on>About</a>
+          <a href="services.html">Services</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn mo" href="login.html">Sign In</a>
+        </nav>
+        <div class="ac">
+          <a class="btn si" href="login.html">Sign In</a>
+        </div>
+        <button class="bg" id="bg" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <!-- Section 1: Stackly - About Us -->
+    <section class="page">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="w">
+        <span class="tag">Stackly</span>
+        <h1 data-a="d">About Us</h1>
+      </div>
+    </section>
+
+    <!-- Section 2: Our story - Born in a warehouse -->
+    <section class="">
+      <div class="w">
+        <span class="tag" data-a="l">Our story</span>
+        <h2 data-a="l">Born in a warehouse</h2>
+        <p class="sub" data-a="r">Stackly began with a simple question: why is moving goods still so hard to see? Eight years later, thousands of teams use our platform to answer it.</p>
+        <div class="sp ">
+          <div data-a="l">
+            <h3 style="font-size:1.5rem">Since 2018</h3>
+            <p style="color:#5a6480;margin-top:8px">Stackly was founded by former freight forwarders and software engineers who saw the same problems everywhere: scattered data, manual updates and zero visibility. We built the platform we wished we had.</p>
+            <ul>
+              <li>Founded in Chennai</li>
+              <li>Teams in 12 cities</li>
+              <li>Carbon-aware routing</li>
+            </ul>
+          </div>
+          <img class="ci sp2" data-a="z" src="assets/warehouse.webp" alt="Since 2018" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/port.svg'">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Impact - Numbers we are proud of -->
+    <section class="wave">
+      <div class="w">
+        <span class="tag" data-a="l">Impact</span>
+        <h2 data-a="l">Numbers we are proud of</h2>
+        <p class="sub" data-a="r"></p>
+        <div class="st">
+          <div data-a="z">
+            <b class="gt" data-n="12" data-s="M+">0</b>
+            <span>Shipments</span>
+          </div>
+          <div data-a="z">
+            <b class="gt" data-n="98" data-s="%">0</b>
+            <span>On-time rate</span>
+          </div>
+          <div data-a="z">
+            <b class="gt" data-n="140" data-s="+">0</b>
+            <span>Countries</span>
+          </div>
+          <div data-a="z">
+            <b class="gt" data-n="4" data-s="K+">0</b>
+            <span>Clients</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Values - What drives us -->
+    <section class="">
+      <div class="w">
+        <span class="tag" data-a="l">Values</span>
+        <h2 data-a="l">What drives us</h2>
+        <p class="sub" data-a="r">Four principles guide how we build products, serve customers and run our company.</p>
+        <div class="gr">
+          <div class="cd " data-a="l">
+            <img class="ci" src="assets/transparancy.webp" alt="Transparency" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/delivery.svg'">
+            <h3>Transparency</h3>
+            <p>Every mile visible.</p>
+          </div>
+          <div class="cd r" data-a="u">
+            <img class="ci" src="assets/speed.webp" alt="Speed" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/route.svg'">
+            <h3>Speed</h3>
+            <p>Fast decisions, faster delivery.</p>
+          </div>
+          <div class="cd d" data-a="r">
+            <img class="ci" src="assets/sustainability.webp" alt="Sustainability" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/cold.svg'">
+            <h3>Sustainability</h3>
+            <p>Fewer emissions per shipment.</p>
+          </div>
+          <div class="cd " data-a="d">
+            <img class="ci" src="assets/partnership.webp" alt="Partnership" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/team.svg'">
+            <h3>Partnership</h3>
+            <p>Your success is ours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Journey - Milestones -->
+    <section class="diag ms">
+      <div class="w">
+        <span class="tag" data-a="l">Journey</span>
+        <h2 data-a="l">Milestones</h2>
+        <p class="sub" data-a="r"></p>
+        <div class="tl">
+          <div class="cd " data-a="l">
+            <img class="ci" src="assets/founded.webp" alt="2018" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/delivery.svg'">
+            <h3>2018</h3>
+            <p>Stackly founded.</p>
+          </div>
+          <div class="cd " data-a="r">
+            <img class="ci" src="assets/Launched_AI_routing_.webp" alt="2020" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/team.svg'">
+            <h3>2020</h3>
+            <p>Launched AI routing.</p>
+          </div>
+          <div class="cd " data-a="l">
+            <img class="ci" src="assets/expanded_140_countries.webp" alt="2023" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/warehouse.svg'">
+            <h3>2023</h3>
+            <p>Expanded to 140 countries.</p>
+          </div>
+          <div class="cd " data-a="r">
+            <img class="ci" src="assets/logistics_platform.webp" alt="2026" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/port.svg'">
+            <h3>2026</h3>
+            <p>Top logistics platform.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Team - Leadership -->
+    <section class="">
+      <div class="w">
+        <span class="tag" data-a="l">Team</span>
+        <h2 data-a="l">Leadership</h2>
+        <p class="sub" data-a="r">An experienced team combining logistics operations, data science and enterprise software.</p>
+        <div class="gr">
+          <div class="cd tm" data-a="l">
+            <img class="pt" src="assets/av2.webp" alt="Arjun Mehta" width="110" height="110" loading="lazy" onerror="this.style.visibility='hidden'">
+            <h3>Arjun Mehta</h3>
+            <p class="who" style="margin:2px 0 8px">Chief Executive Officer</p>
+            <p>Two decades in global freight; previously led APAC operations at a Fortune 500 carrier.</p>
+          </div>
+          <div class="cd tm" data-a="u">
+            <img class="pt" src="assets/lena.webp" alt="Dr. Kavya Nair" width="110" height="110" loading="lazy" onerror="this.style.visibility='hidden'">
+            <h3>Dr. Kavya Nair</h3>
+            <p class="who" style="margin:2px 0 8px">Chief Technology Officer</p>
+            <p>PhD in operations research and architect of the Stackly routing engine.</p>
+          </div>
+          <div class="cd tm" data-a="r">
+            <img class="pt" src="assets/av3.webp" alt="Rohan Iyer" width="110" height="110" loading="lazy" onerror="this.style.visibility='hidden'">
+            <h3>Rohan Iyer</h3>
+            <p class="who" style="margin:2px 0 8px">Chief Operating Officer</p>
+            <p>Runs 60+ fulfilment sites with a relentless focus on safety and on-time delivery.</p>
+          </div>
+          <div class="cd tm" data-a="d">
+            <img class="pt" src="assets/Aisha.webp" alt="Meera Sundaram" width="110" height="110" loading="lazy" onerror="this.style.visibility='hidden'">
+            <h3>Meera Sundaram</h3>
+            <p class="who" style="margin:2px 0 8px">VP, Customer Success</p>
+            <p>Leads onboarding and support for enterprise shippers across 30 countries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Culture - Life at Stackly -->
+    <section class="wave">
+      <div class="w">
+        <span class="tag" data-a="l">Culture</span>
+        <h2 data-a="l">Life at Stackly</h2>
+        <p class="sub" data-a="r">We hire curious, caring people and give them room to do the best work of their careers.</p>
+        <div class="gr">
+          <div class="cd " data-a="l">
+            <img class="ci" src="assets/learing_and_growth.webp" alt="Learning and Growth" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/port.svg'">
+            <h3>Learning and Growth</h3>
+            <p>Annual learning budget, mentorship programmes and clear career paths across engineering, operations and customer success.</p>
+          </div>
+          <div class="cd r" data-a="u">
+            <img class="ci" src="assets/flexible_work.webp" alt="Flexible Work" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/route.svg'">
+            <h3>Flexible Work</h3>
+            <p>Hybrid schedules, remote-friendly roles and generous leave so teams can balance work with life.</p>
+          </div>
+          <div class="cd d" data-a="r">
+            <img class="ci" src="assets/Impact_and_Ownership (1).webp" alt="Impact and Ownership" width="800" height="500" loading="lazy" onerror="this.onerror=null;this.src='assets/img/warehouse.svg'">
+            <h3>Impact and Ownership</h3>
+            <p>Small, empowered squads ship features used by thousands of logistics teams worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: FAQ - Common questions -->
+    <section class="">
+      <div class="w">
+        <span class="tag" data-a="l">FAQ</span>
+        <h2 data-a="l">Common questions</h2>
+        <p class="sub" data-a="r"></p>
+        <details class="fq" data-a="u">
+          <summary>Where are you based?</summary>
+          <p>Our headquarters is in Chennai, India, with regional offices in Singapore, Dubai and London so that customers receive support in their own time zone.</p>
+        </details>
+        <details class="fq" data-a="u">
+          <summary>Do you offer support 24/7?</summary>
+          <p>Yes. Live chat, phone and email support are available around the clock, with a guaranteed 15-minute response on priority plans.</p>
+        </details>
+        <details class="fq" data-a="u">
+          <summary>How long does onboarding take?</summary>
+          <p>Most teams go live within two to four weeks. A dedicated implementation specialist helps with data migration, carrier connections and staff training.</p>
+        </details>
+        <details class="fq" data-a="u">
+          <summary>Does Stackly integrate with our existing systems?</summary>
+          <p>Yes. We provide open APIs and pre-built connectors for popular ERP, WMS, OMS and eCommerce platforms, so Stackly fits into the tools you already use.</p>
+        </details>
+        <details class="fq" data-a="u">
+          <summary>Is my logistics data secure?</summary>
+          <p>All data is encrypted in transit and at rest, hosted in ISO 27001-certified facilities, with role-based access controls and regular independent security audits.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Section 9: Ready to simplify your supply chain? -->
+    <section>
+      <div class="w">
+        <div class="cta" data-a="z">
+          <h2>Ready to simplify your supply chain?</h2>
+          <p>Talk to our team and see Stackly in action with your own lanes and volumes.</p>
+          <a class="btn b1" href="contact.html">Book a Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expandable footer: logo, social icons (go to 404), about, address -->
+    <footer class="ft">
+      <div class="w">
+        <div class="fh">
+          <img src="assets/stackly-logo-16203C.webp" alt="Stackly" width="150" height="38">
+          <div class="so">
+            <a href="404.html" aria-label="facebook-f"><svg viewBox="0 0 320 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></a>
+            <a href="404.html" aria-label="x-twitter"><svg viewBox="0 0 512 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+            <a href="404.html" aria-label="linkedin-in"><svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+            <a href="404.html" aria-label="instagram"><svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+            <a href="404.html" aria-label="youtube"><svg viewBox="0 0 576 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a>
+          </div>
+          <button class="btn o tg" aria-expanded="false">More about us</button>
+        </div>
+        <div class="fx">
+          <div class="fxg">
+            <div>
+              <h5>About Stackly</h5>
+              <p>Stackly is a logistics technology company connecting shippers, carriers and warehouses on one intelligent platform.</p>
+            </div>
+            <div>
+              <h5>Address</h5>
+              <p><strong>Address:</strong> MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+              <p><strong>Phone:</strong> 07010792745</p>
+              <p><strong>Website:</strong> https://thestackly.com/</p>
+            </div>
+            <div>
+              <h5>Explore</h5>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="fb">
+          &copy;
+          2026 Stackly Technologies. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js?v=5"></script>
+    <script src="js/extra.js?v=5"></script>
+  </body>
+</html>

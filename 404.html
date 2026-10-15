@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Page Not Found | Stackly Logistics</title>
+
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/extra.css?v=5">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- 404 page styles -->
+    <style>
+      .nf {
+        position: relative;
+        overflow: hidden
+      }
+
+      .nf .nfc {
+        position: relative;
+        z-index: 1;
+        max-width: 640px;
+        padding: 20px
+      }
+
+      .nflogo {
+        display: inline-block;
+        margin-bottom: 18px
+      }
+
+      .nflogo img {
+        display: block;
+        width: 150px;
+        height: auto
+      }
+
+      .nfart {
+        width: min(340px, 72%);
+        height: auto;
+        margin: 0 auto 14px;
+        display: block
+      }
+
+      .nf h1 {
+        line-height: 1;
+        margin-bottom: 4px
+      }
+
+      .nf h2 {
+        font-size: clamp(1.3rem, 3vw, 1.9rem);
+        margin-bottom: 8px
+      }
+
+      .nfa {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 28px
+      }
+
+      @media(max-width:560px) {
+        .nfa {
+          flex-direction: column;
+          align-items: stretch
+        }
+
+        .nfa .btn {
+          justify-content: center
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Page loader (animated SVG truck) -->
+    <div id="ld">
+      <div class="lw">
+        <svg viewBox="0 0 200 90">
+          <path class="lp" d="M20 60h110V25H20zM130 38h30l20 20v12h-50M20 70h160" fill="none" stroke="#ef4444" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="55" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="150" cy="72" r="9" fill="#f97316">
+            <animate attributeName="r" values="9;11;9" dur=".8s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <div class="lb">
+          <i></i>
+        </div>
+        <p style="color:#5a6480;margin-top:10px;font-size:.85rem">Routing your shipment...</p>
+      </div>
+    </div>
+
+    <!-- Dark overlay behind the mobile menu -->
+    <div class="ov"></div>
+
+    <!-- 404 page content -->
+    <main class="nf">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="nfc">
+        <a class="nflogo" href="index.html"><img src="assets/stackly-logo-16203C.webp" alt="Stackly" width="150" height="38"></a>
+        <svg class="nfart" viewBox="0 0 260 160" aria-hidden="true">
+          <path d="M18 132C70 132 82 58 132 58s68 44 110-6" fill="none" stroke="#ef4444" stroke-width="5" stroke-dasharray="14 12" stroke-linecap="round"/>
+          <circle cx="18" cy="132" r="9" fill="#f97316"/>
+          <circle cx="242" cy="52" r="17" fill="#ef4444"/>
+          <text x="242" y="60" font-size="22" font-weight="700" font-family="Poppins,sans-serif" fill="#fff" text-anchor="middle">?</text>
+        </svg>
+        <span class="tag">Off route</span>
+        <h1 class="gt">404</h1>
+        <h2>Page not found</h2>
+        <p class="sub" style="margin-inline:auto">The page you are looking for has drifted off route. It may have been moved, renamed, or no longer exists.</p>
+        <div class="nfa">
+          <button id="back" class="btn" type="button">Go Back</button>
+          <a class="btn o" href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js?v=5"></script>
+    <script src="js/extra.js?v=5"></script>
+  </body>
+</html>
